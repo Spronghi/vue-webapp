@@ -1,0 +1,29 @@
+{
+  "header" : {
+    "title" : "Header Title",
+    "subtitle" : "Header Subtitle",
+    "who" : "Who",
+    "gallery" : "Gallery",
+    "find-us" : "Find Us"
+  },
+  "home": {
+    "title" : "Home Title",
+    "subtitle" : "Home Subtitle"
+  },
+  "who": {
+    "title": "Who Title",
+    "subtitle": "Who Subtitle",
+    "card1": {
+      "title": "Card1 Title",
+      "content": "Peofjwe fijwe fowie jfwenfwefh eqw. Fwef jfew wemndsv ew wfbwef bwefiu we fwen fe wflm. Fwef jfew wemndsv ew wfbwef bwefiu we fwen fe wflm. Fwef jfew wemndsv ew wfbwef bwefiu we fwen fe wflm. Fwef jfew wemndsv ew wfbwef bwefiu we fwen fe wflm"
+    },
+    "card2": {
+      "title": "Card2 Title",
+      "content": "Peofjwe fijwe fowie jfwenfwefh eqw. Fwef jfew wemndsv ew wfbwef bwefiu we fwen fe wflm. Fwef jfew wemndsv ew wfbwef bwefiu we fwen fe wflm. Fwef jfew wemndsv ew wfbwef bwefiu we fwen fe wflm"
+    },
+    "card3": {
+      "title": "Card3 Title",
+      "content": "Peofjwe fijwe fowie jfwenfwefh eqw. Fwef jfew wemndsv ew wfbwef bwefiu we fwen fe wflm"
+    }
+  }
+}

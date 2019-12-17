@@ -1,0 +1,27 @@
+{
+  "header" : {
+    "title" : "Barba Gay",
+    "subtitle" : "Troppo gay",
+    "who" : "Chi Siamo"
+  },
+  "home": {
+    "title" : "Barba me la Suca",
+    "subtitle" : "The new style of rich and gay people"
+  },
+  "who": {
+    "title" : "Chi Siamo",
+    "subtitle" : "Gente simpatica",
+    "card1": {
+      "title": "Barba è particolare",
+      "content": "Peofjwe fijwe fowie jfwenfwefh eqw. Fwef jfew wemndsv ew wfbwef bwefiu we fwen fe wflm. Fwef jfew wemndsv ew wfbwef bwefiu we fwen fe wflm. Fwef jfew wemndsv ew wfbwef bwefiu we fwen fe wflm. Fwef jfew wemndsv ew wfbwef bwefiu we fwen fe wflm"
+    },
+    "card2": {
+      "title": "Barba è particolare",
+      "content": "Peofjwe fijwe fowie jfwenfwefh eqw. Fwef jfew wemndsv ew wfbwef bwefiu we fwen fe wflm. Fwef jfew wemndsv ew wfbwef bwefiu we fwen fe wflm. Fwef jfew wemndsv ew wfbwef bwefiu we fwen fe wflm"
+    },
+    "card3": {
+      "title": "Barba è particolare",
+      "content": "Peofjwe fijwe fowie jfwenfwefh eqw. Fwef jfew wemndsv ew wfbwef bwefiu we fwen fe wflm"
+    }
+  }
+}
