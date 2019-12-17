@@ -1,7 +1,7 @@
 <template>
     <v-app-bar app :color="color">
 
-        <v-menu transition="slide-y-transition" bottom>
+        <v-menu v-if="isMobile" transition="slide-y-transition" bottom>
             <template v-slot:activator="{ on }">
                 <v-app-bar-nav-icon  v-on="on"></v-app-bar-nav-icon>
             </template>
