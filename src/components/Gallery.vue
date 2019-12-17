@@ -13,7 +13,7 @@
                                 <v-hover v-slot:default="{ hover }" :key="index">
                                     <v-card flat tile :elevation="hover ? 12 : 2" @click="showDialog(item, index)" >
                                         <v-img
-                                                :height="!hover && !isMobile ? 280 : 200"
+                                                :height="imageHeight(hover)"
                                                 :src="item.img"
                                                 :lazy-src="item.img"
                                                 aspect-ratio="1"
@@ -28,7 +28,7 @@
                                                 </v-row>
                                             </template>
                                         </v-img>
-                                        <v-card-text v-if="hover && !isMobile">
+                                        <v-card-text v-if="hover && !isMobile" height="80">
                                             Visit ten places on our planet that are undergoing the biggest changes today.
                                         </v-card-text>
                                     </v-card>
@@ -86,10 +86,13 @@
                     index: index,
                     img: item.img
                 };
+            },
+            imageHeight(hover){
+                return (!hover && !this.isMobile) ? 280 : 200
             }
         },
         computed: {
-            isMobile: isMobile
+            isMobile: isMobile,
         }
     }
 </script>
