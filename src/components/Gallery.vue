@@ -13,6 +13,7 @@
                                 <v-hover v-slot:default="{ hover }" :key="index">
                                     <v-card flat tile :elevation="hover ? 12 : 2" @click="showDialog(item, index)" >
                                         <v-img
+                                                height="200"
                                                 :src="item.img"
                                                 :lazy-src="item.img"
                                                 aspect-ratio="0.7"
