@@ -26,22 +26,20 @@
                 <v-divider></v-divider>
             </v-col>
             <v-row>
-                <v-col class="text-left" cols="12" offset-md="1">
-                    <v-card class="d-md-flex text-left no-border" outlined>
+                <v-col class="text-left" cols="12" offset-lg="1">
+                    <v-card class="d-md-flex text-left no-border" color="transparent" outlined>
                         <v-card-text class="headline text-left">
                             <span class="buy-us">Why</span>
                             <span class="buy-us font-weight-black"> Buy From Us?</span>
                         </v-card-text>
                     </v-card>
                 </v-col>
-                <v-col class="col-lg-6 col-md-12" offset-md="2">
+                <v-col class="col-lg-6 col-md-8" color="transparent" offset="1">
                     <v-row v-for="(item, index) in items" :key="index">
-                        <v-card class="d-md-flex no-border" outlined>
-                            <v-icon color="#8bc34a">mdi-check-outline</v-icon>
-                            <v-card-text class="headline text-left">
-                                 {{item}}
-                            </v-card-text>
-                        </v-card>
+                        <v-col cols="12" offset-md="1" class="text-left">
+                            <v-icon color="#8bc34a" class="icon-check">mdi-check-outline</v-icon>
+                            <span class="headline " v-text="item"></span>
+                        </v-col>
                     </v-row>
                 </v-col>
                 <v-col v-if="!isMobile" cols="col-lg-4">
@@ -98,5 +96,13 @@
         font-family: "Dosis";
         color: black;
         font-size: 2.3em;
+    }
+
+    .icon-check {
+        position: relative;
+        right: 24px;
+        top: -2%;
+        height: 0;
+        width: 0;
     }
 </style>
