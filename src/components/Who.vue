@@ -11,11 +11,11 @@
                 </v-card>
             </v-col>
 
-            <v-col cols="6" offset-sm="3">
+            <v-col class="col-lg-6 col-md-12" offset-lg="3">
                 <v-row>
                     <v-card class="d-md-flex no-border" outlined>
                         <v-card class="d-md-flex no-border" outlined>
-                            <v-card-text class="headline text-left">
+                            <v-card-text class="headline" :class="{'text-center' : isMobile, 'text-left':!isMobile }">
                                 {{who}}
                             </v-card-text>
                         </v-card>
@@ -26,7 +26,7 @@
                 <v-divider></v-divider>
             </v-col>
             <v-row>
-                <v-col class="text-left" cols="12" offset-sm="1">
+                <v-col class="text-left" cols="12" offset-md="1">
                     <v-card class="d-md-flex text-left no-border" outlined>
                         <v-card-text class="headline text-left">
                             <span class="buy-us">Why</span>
@@ -34,17 +34,17 @@
                         </v-card-text>
                     </v-card>
                 </v-col>
-                <v-col cols="6" offset-sm="2">
+                <v-col class="col-lg-6 col-md-12" offset-md="2">
                     <v-row v-for="(item, index) in items" :key="index">
                         <v-card class="d-md-flex no-border" outlined>
                             <v-icon color="#8bc34a">mdi-check-outline</v-icon>
                             <v-card-text class="headline text-left">
-                                {{item}}
+                                 {{item}}
                             </v-card-text>
                         </v-card>
                     </v-row>
                 </v-col>
-                <v-col cols="4">
+                <v-col v-if="!isMobile" cols="col-lg-4">
                     <v-img
                             src="../imgs/who-1.png"
                             lazy-src="../imgs/who-1.png"
@@ -65,6 +65,8 @@
 </template>
 
 <script>
+    import isMobile from './utils/Mobile';
+
     export default {
         name: "Who",
         data: () => ({
@@ -80,7 +82,10 @@
                 "100% made in Bulgaria/EU."
             ],
             who: "Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-        })
+        }),
+        computed : {
+            isMobile: isMobile
+        }
     }
 </script>
 

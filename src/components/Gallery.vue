@@ -1,23 +1,22 @@
 <template>
     <v-container id="gallery" fluid>
         <v-row>
-            <v-col cols="12" sm="12" offset-sm="0">
+            <v-col cols="12">
                 <v-card>
                     <v-container fluid>
                         <v-row>
                             <v-col
                                     v-for="(item, index) in images"
                                     :key="index"
-                                    class="d-flex child-flex"
-                                    cols="2"
+                                    :class="{'col-2' : !isMobile, 'col-12' : isMobile}"
                             >
                                 <v-hover v-slot:default="{ hover }" :key="index">
                                     <v-card flat tile :elevation="hover ? 12 : 2" @click="showDialog(item, index)" >
                                         <v-img
-                                                :height="hover ? 200 : 280"
+                                                :height="!hover && !isMobile ? 280 : 200"
                                                 :src="item.img"
                                                 :lazy-src="item.img"
-                                                aspect-ratio="1"
+                                                aspect-ratio="0.7"
                                                 class="grey lighten-2"
                                         >
                                                 <v-btn text class="font-weight-medium uppercase text-white">
@@ -29,7 +28,7 @@
                                                     </v-row>
                                                 </template>
                                             </v-img>
-                                            <v-card-text v-if="hover">
+                                            <v-card-text v-if="hover && !isMobile">
                                                 Visit ten places on our planet that are undergoing the biggest changes today.
                                             </v-card-text>
                                     </v-card>
@@ -50,6 +49,9 @@
                             </v-row>
                         </template>
                     </v-img>
+                    <v-card-text v-if="isMobile">
+                        Visit ten places on our planet that are undergoing the biggest changes today.
+                    </v-card-text>
                 </v-col>
             </v-layout>
         </v-dialog>
@@ -57,6 +59,7 @@
 </template>
 
 <script>
+    import isMobile from "./utils/Mobile";
     export default {
         name: "Gallery",
         data: ()=>({
@@ -84,6 +87,9 @@
                     img: item.img
                 };
             }
+        },
+        computed: {
+            isMobile: isMobile
         }
     }
 </script>

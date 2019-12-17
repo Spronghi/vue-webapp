@@ -2,5 +2,5 @@ module.exports = {
   "transpileDependencies": [
     "vuetify"
   ],
-  publicPath: "vue-webapp"
+  publicPath: process.env.NODE_ENV === 'production' ? '/vue-webapp/' : '/'
 };
