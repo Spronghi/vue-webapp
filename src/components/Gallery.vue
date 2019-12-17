@@ -16,21 +16,21 @@
                                                 :height="!hover && !isMobile ? 280 : 200"
                                                 :src="item.img"
                                                 :lazy-src="item.img"
-                                                aspect-ratio="0.7"
+                                                aspect-ratio="1"
                                                 class="grey lighten-2"
                                         >
-                                                <v-btn text class="font-weight-medium uppercase text-white">
-                                                    {{item.title}}
-                                                </v-btn>
-                                                <template v-slot:placeholder>
-                                                    <v-row class="fill-height ma-0" align="center" justify="center">
-                                                        <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
-                                                    </v-row>
-                                                </template>
-                                            </v-img>
-                                            <v-card-text v-if="hover && !isMobile">
-                                                Visit ten places on our planet that are undergoing the biggest changes today.
-                                            </v-card-text>
+                                            <v-btn text class="font-weight-medium uppercase text-white">
+                                                {{item.title}}
+                                            </v-btn>
+                                            <template v-slot:placeholder>
+                                                <v-row class="fill-height ma-0" align="center" justify="center">
+                                                    <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+                                                </v-row>
+                                            </template>
+                                        </v-img>
+                                        <v-card-text v-if="hover && !isMobile">
+                                            Visit ten places on our planet that are undergoing the biggest changes today.
+                                        </v-card-text>
                                     </v-card>
                                 </v-hover>
                             </v-col>
@@ -41,7 +41,7 @@
         </v-row>
         <v-dialog v-model="dialog.show" max-width="1100">
             <v-layout text-center wrap class="background-white">
-                <v-col max-width="1000" cols="12">
+                <v-col max-width="900" cols="12">
                     <v-img :src="dialog.img" :lazy-src="dialog.img">
                         <template v-slot:placeholder>
                             <v-row class="fill-height ma-0" align="center" justify="center">
