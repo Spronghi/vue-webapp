@@ -11,7 +11,7 @@
                 </v-card>
             </v-col>
 
-            <v-col class="col-lg-6 col-md-12" offset-lg="3">
+            <v-col class="col-lg-10 col-md-12" offset-lg="1">
                 <v-row>
                     <v-card class="d-md-flex no-border" outlined>
                         <v-card class="d-md-flex no-border" outlined>

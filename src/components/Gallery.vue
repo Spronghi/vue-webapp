@@ -13,10 +13,9 @@
                                 <v-hover v-slot:default="{ hover }" :key="index">
                                     <v-card flat tile :elevation="hover ? 12 : 2" @click="showDialog(item, index)" >
                                         <v-img
-                                                :height="imageHeight(hover)"
                                                 :src="item.img"
                                                 :lazy-src="item.img"
-                                                aspect-ratio="1"
+                                                aspect-ratio="0.7"
                                                 class="grey lighten-2"
                                         >
                                             <v-btn text class="font-weight-medium uppercase text-white">
@@ -28,9 +27,9 @@
                                                 </v-row>
                                             </template>
                                         </v-img>
-                                        <v-card-text v-if="hover && !isMobile" height="80">
-                                            Visit ten places on our planet that are undergoing the biggest changes today.
-                                        </v-card-text>
+<!--                                        <v-card-text v-if="hover && !isMobile" height="80" >-->
+<!--                                            Visit ten places on our planet that are undergoing the biggest changes today.-->
+<!--                                        </v-card-text>-->
                                     </v-card>
                                 </v-hover>
                             </v-col>
@@ -39,9 +38,9 @@
                 </v-card>
             </v-col>
         </v-row>
-        <v-dialog v-model="dialog.show" max-width="1100">
+        <v-dialog v-model="dialog.show" max-width="900">
             <v-layout text-center wrap class="background-white">
-                <v-col max-width="900" cols="12">
+                <v-col max-width="800" cols="12">
                     <v-img :src="dialog.img" :lazy-src="dialog.img">
                         <template v-slot:placeholder>
                             <v-row class="fill-height ma-0" align="center" justify="center">
@@ -49,7 +48,9 @@
                             </v-row>
                         </template>
                     </v-img>
-                    <v-card-text v-if="isMobile">
+                    <v-card-text>
+                        Visit ten places on our planet that are undergoing the biggest changes today.
+                        Visit ten places on our planet that are undergoing the biggest changes today.
                         Visit ten places on our planet that are undergoing the biggest changes today.
                     </v-card-text>
                 </v-col>
@@ -84,15 +85,16 @@
                 this.dialog = {
                     show: true,
                     index: index,
+                    title: item.title,
                     img: item.img
                 };
             },
-            imageHeight(hover){
+            getImgHeight(hover){
                 return (!hover && !this.isMobile) ? 280 : 200
             }
         },
         computed: {
-            isMobile: isMobile,
+            isMobile: isMobile
         }
     }
 </script>
