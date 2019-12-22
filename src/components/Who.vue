@@ -1,20 +1,20 @@
 <template>
-
     <v-container id="who" fluid>
         <v-layout text-center wrap>
-            <v-col class="text-left" cols="12" offset-sm="1" style="padding-bottom: 0">
-                <v-card class="d-md-flex text-left no-border" outlined>
-                    <v-card-text class="headline text-left" style="padding-bottom: 0">
-                        <span class="buy-us">Who we</span>
-                        <span class="buy-us font-weight-black"> Are</span>
+            <!-- WHO WE ARE -->
+            <v-col class="text-left pb-0" cols="12" offset-sm="1">
+                <v-card class="d-md-flex text-left no-border" color="transparent" outlined>
+                    <v-card-text class="headline text-left pb-0">
+                        <span class="buy-us">{{$t('home.who.who-we-are-1')}}</span>
+                        <span class="buy-us font-weight-black">{{$t('home.who.who-we-are-2')}}</span>
                     </v-card-text>
                 </v-card>
             </v-col>
-
+            <!-- DESCRIZIONE - WHO WE ARE -->
             <v-col class="col-lg-10 col-md-12" offset-lg="1">
                 <v-row>
-                    <v-card class="d-md-flex no-border" outlined>
-                        <v-card class="d-md-flex no-border" outlined>
+                    <v-card class="d-md-flex no-border" color="transparent" outlined>
+                        <v-card color="transparent" class="d-md-flex no-border" outlined>
                             <v-card-text class="headline" :class="{'text-center' : isMobile, 'text-left':!isMobile }">
                                 {{who}}
                             </v-card-text>
@@ -22,18 +22,20 @@
                     </v-card>
                 </v-row>
             </v-col>
-            <v-col cols="12" style="margin-bottom: 30px">
+            <v-col cols="12" class="mb-3">
                 <v-divider></v-divider>
             </v-col>
-            <v-row>
+            <v-row class="light-green lighten-5 pb-10 pt-10">
+                <!-- WHY BUY FROM US -->
                 <v-col class="text-left" cols="12" offset-lg="1">
                     <v-card class="d-md-flex text-left no-border" color="transparent" outlined>
                         <v-card-text class="headline text-left">
-                            <span class="buy-us">Why</span>
-                            <span class="buy-us font-weight-black"> Buy From Us?</span>
+                            <span class="buy-us">{{$t('home.who.why-buy-from-us-1')}}</span>
+                            <span class="buy-us font-weight-black"> {{$t('home.who.why-buy-from-us-2')}}</span>
                         </v-card-text>
                     </v-card>
                 </v-col>
+                <!-- LISTA DESCRIZIONI - WHY BUY FROM US -->
                 <v-col class="col-lg-6 col-md-8" color="transparent" offset="1">
                     <v-row v-for="(item, index) in items" :key="index">
                         <v-col cols="12" offset-md="1" class="text-left">
@@ -42,10 +44,11 @@
                         </v-col>
                     </v-row>
                 </v-col>
-                <v-col v-if="!isMobile" cols="col-lg-4">
+                <!-- IMMAGINE SEDIA DEL CAZZO - WHY BUY FROM US -->
+                <v-col v-if="!isMobile" class="hidden-sm-and-down" cols="col-lg-4">
                     <v-img
-                            src="../imgs/who-1.png"
-                            lazy-src="../imgs/who-1.png"
+                            src="../assets/imgs/why-buy-from-us.png"
+                            lazy-src="../assets/imgs/why-buy-from-us.png"
                             aspect-ratio="1"
                             max-width="500"
                             max-height="1000"

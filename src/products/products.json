@@ -1,0 +1,54 @@
+{
+  "products" : [
+    {
+      "id" : 1,
+      "name" : "product-1.title",
+      "backgroundImage" : "background-2",
+      "images" : [
+        { "translate":"product-1.image-5",  "img": "https://picsum.photos/500/300?image=30" },
+        { "translate":"product-1.image-6",  "img": "https://picsum.photos/500/300?image=35" },
+        { "translate":"product-1.image-7",  "img": "https://picsum.photos/500/300?image=40" },
+        { "translate":"product-1.image-8",  "img": "https://picsum.photos/500/300?image=45" }
+      ],
+      "description": "product-1.description"
+    },
+    {
+      "id" : 2,
+      "name" : "product-2.title",
+      "backgroundImage" : "background-3",
+      "titleBlack" : true,
+      "images" : [
+        { "translate":"product-2.image-9",  "img": "https://picsum.photos/500/300?image=50" },
+        { "translate":"product-2.image-10", "img": "https://picsum.photos/500/300?image=55" },
+        { "translate":"product-2.image-11", "img": "https://picsum.photos/500/300?image=60" },
+        { "translate":"product-2.image-12", "img": "https://picsum.photos/500/300?image=70" }
+      ],
+      "description": "product-2.description"
+    },
+    {
+      "id" : 3,
+      "name" : "product-3.title",
+      "backgroundImage" : "background-4",
+      "images" : [
+        { "translate":"product-3.image-9",  "img": "https://picsum.photos/500/300?image=80" },
+        { "translate":"product-3.image-10", "img": "https://picsum.photos/500/300?image=85" },
+        { "translate":"product-3.image-11", "img": "https://picsum.photos/500/300?image=90" },
+        { "translate":"product-3.image-12", "img": "https://picsum.photos/500/300?image=95" }
+      ],
+      "description": "product-2.description"
+    },
+    {
+      "id" : 4,
+      "name" : "product-4.title",
+      "titleBlack" : true,
+      "backgroundImage" : "background-5",
+      "images" : [
+        { "translate":"product-4.image-9",  "img": "https://picsum.photos/500/300?image=100" },
+        { "translate":"product-4.image-10", "img": "https://picsum.photos/500/300?image=120" },
+        { "translate":"product-4.image-11", "img": "https://picsum.photos/500/300?image=110" },
+        { "translate":"product-4.image-12", "img": "https://picsum.photos/500/300?image=115" }
+      ],
+      "description": "product-2.description"
+    }
+  ]
+}

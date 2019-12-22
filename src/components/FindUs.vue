@@ -4,8 +4,8 @@
             <v-col class="text-left col-lg-8 col-md-6" offset-lg="1" style="padding-bottom: 0">
                 <v-card color="transparent" class="d-md-flex text-left no-border" outlined>
                     <v-card-text class="headline text-left" style="padding-bottom: 0">
-                        <span class="buy-us">Find</span>
-                        <span class="buy-us font-weight-black"> Us</span>
+                        <span class="buy-us">{{$t('home.find-us-1')}}</span>
+                        <span class="buy-us font-weight-black">{{$t('home.find-us-2')}}</span>
                     </v-card-text>
                 </v-card>
             </v-col>

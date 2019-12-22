@@ -8,29 +8,29 @@
                             <v-col
                                     v-for="(item, index) in images"
                                     :key="index"
-                                    :class="{'col-2' : !isMobile, 'col-12' : isMobile}"
+                                    :class="{'col-3' : !isMobile, 'col-12' : isMobile}"
                             >
                                 <v-hover v-slot:default="{ hover }" :key="index">
-                                    <v-card flat tile :elevation="hover ? 12 : 2" @click="showDialog(item, index)" >
+                                    <v-card flat tile :elevation="hover ? 12 : 2" @click="clickCard(item, index)" >
                                         <v-img
-                                                height="200"
+                                                height="350"
                                                 :src="item.img"
                                                 :lazy-src="item.img"
                                                 aspect-ratio="0.7"
                                                 class="grey lighten-2"
                                         >
-                                            <v-btn text class="font-weight-medium uppercase text-white">
-                                                {{item.title}}
-                                            </v-btn>
                                             <template v-slot:placeholder>
                                                 <v-row class="fill-height ma-0" align="center" justify="center">
                                                     <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
                                                 </v-row>
                                             </template>
                                         </v-img>
-<!--                                        <v-card-text v-if="hover && !isMobile" height="80" >-->
-<!--                                            Visit ten places on our planet that are undergoing the biggest changes today.-->
-<!--                                        </v-card-text>-->
+                                        <v-card-title primary-title v-if="item.translate">
+                                            <h3 class="headline mb-0">{{$t(item.translate + '.title')}}</h3>
+                                        </v-card-title>
+                                        <v-card-text v-if="!isMobile && item.translate" height="180" >
+                                            {{$t(item.translate + '.description')}}
+                                        </v-card-text>
                                     </v-card>
                                 </v-hover>
                             </v-col>
@@ -49,10 +49,8 @@
                             </v-row>
                         </template>
                     </v-img>
-                    <v-card-text>
-                        Visit ten places on our planet that are undergoing the biggest changes today.
-                        Visit ten places on our planet that are undergoing the biggest changes today.
-                        Visit ten places on our planet that are undergoing the biggest changes today.
+                    <v-card-text v-if="dialog.translate">
+                        {{$t(dialog.translate + '.description')}}
                     </v-card-text>
                 </v-col>
             </v-layout>
@@ -64,38 +62,30 @@
     import isMobile from "./utils/Mobile";
     export default {
         name: "Gallery",
+        props: {
+            images: Array,
+            redirect: Boolean,
+            redirectCallback: { Function, required: false }
+        },
         data: ()=>({
-            dialog: { show: false },
-            images: [
-                { title:'who 1',  img: `https://picsum.photos/500/300?image=${0 * 5 + 10}` },
-                { title:'who 2',  img: `https://picsum.photos/500/300?image=${1 * 5 + 10}` },
-                { title:'who 3',  img: `https://picsum.photos/500/300?image=${2 * 5 + 10}` },
-                { title:'who 4',  img: `https://picsum.photos/500/300?image=${3 * 5 + 10}` },
-                { title:'who 5',  img: `https://picsum.photos/500/300?image=${4 * 5 + 10}` },
-                { title:'who 6',  img: `https://picsum.photos/500/300?image=${5 * 5 + 10}` },
-                { title:'who 7',  img: `https://picsum.photos/500/300?image=${6 * 5 + 10}` },
-                { title:'who 8',  img: `https://picsum.photos/500/300?image=${7 * 5 + 10}` },
-                { title:'who 9',  img: `https://picsum.photos/500/300?image=${8 * 5 + 10}` },
-                { title:'who 10', img: `https://picsum.photos/500/300?image=${9 * 5 + 10}` },
-                { title:'who 11', img: `https://picsum.photos/500/300?image=${10 * 5 + 10}` },
-                { title:'who 12', img: `https://picsum.photos/500/300?image=${11 * 5 + 10}` },
-            ]
+            dialog: { show: false }
         }),
         methods:{
-            showDialog(item, index){
-                this.dialog = {
-                    show: true,
-                    index: index,
-                    title: item.title,
-                    img: item.img
-                };
-            },
-            getImgHeight(hover){
-                return (!hover && !this.isMobile) ? 280 : 200
+            clickCard(item, index){
+                if(!this.redirect){
+                    this.dialog = {
+                        show: true,
+                        index: index,
+                        translate: item.translate,
+                        img: item.img
+                    };
+                } else {
+                    this.redirectCallback(item.id);
+                }
             }
         },
         computed: {
-            isMobile: isMobile
+            isMobile
         }
     }
 </script>
@@ -109,5 +99,12 @@
     }
     .background-white {
         background-color: white;
+    }
+    .text-primary {
+        color: #8bc34a !important;
+    }
+
+    .v-dialog:not(.v-dialog--fullscreen) {
+        max-height: none !important;
     }
 </style>

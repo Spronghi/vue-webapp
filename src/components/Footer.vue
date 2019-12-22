@@ -37,7 +37,7 @@
 
 <style scoped>
     .tmp-primary {
-        color: white;
-        background-color: #8bc34a;
+        color: white !important;
+        background-color: #8bc34a !important;
     }
 </style>
