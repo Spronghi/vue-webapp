@@ -18,8 +18,10 @@ const router = new VueRouter({
   routes
 });
 
+let userLang = navigator.language || navigator.userLanguage;
+
 const i18n = new VueI18n({
-  locale: 'en', // set locale
+  locale: userLang.includes('it') ? 'it' : 'en', // set locale
   messages : lang, // set locale messages
   theme: {
     themes: {

@@ -52,6 +52,11 @@
   "product-4" : {
     "title" : "Product 4",
     "description": "Peofjwe fijwe fowie jfwenfwefh eqw. Fwef jfew wemndsv ew wfbwef bwefiu we fwen fe wflm. Fwef jfew wemndsv ew wfbwef bwefiu we fwen fe wflm. Fwef jfew wemndsv ew wfbwef bwefiu we fwen fe wflm. Fwef jfew wemndsv ew wfbwef bwefiu we fwen fe wflm, Peofjwe fijwe fowie jfwenfwefh eqw. Fwef jfew wemndsv ew wfbwef bwefiu we fwen fe wflm. Fwef jfew wemndsv ew wfbwef bwefiu we fwen fe wflm. Fwef jfew wemndsv ew wfbwef bwefiu we fwen fe wflm. Fwef jfew wemndsv ew wfbwef bwefiu we fwen fe wflm"
+  },
+  "cookie" : {
+    "askIt1" : "This website uses ",
+    "askIt2" : " to ensure you get the best experience on our website.",
+    "accept" : "I accept",
+    "ignore" : "Ignore It"
   }
-
 }
