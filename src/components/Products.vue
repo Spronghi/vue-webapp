@@ -17,7 +17,7 @@
 <script>
     import Presentation from "./Presentation";
     import Gallery from "./Gallery";
-    import json from '../products/products.json';
+    import json from '../data/products.json';
     export default {
         name: "Products",
         components: { Gallery, Presentation },

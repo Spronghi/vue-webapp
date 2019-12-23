@@ -18,7 +18,7 @@
     import Gallery from './Gallery';
     import FindUs from "./FindUs";
     import Who from "./Who";
-    import json from "../products/products";
+    import json from "../data/products";
 
     export default {
         name: "Home",
