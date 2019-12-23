@@ -24,9 +24,9 @@
         computed: {
             product(){
                 let product = json.products.find(p => p.id == this.$route.params.id);
-
+                let backgroundImage = product.backgroundImage.includes('http') ? product.backgroundImage : ('../imgs/' + product.backgroundImage + '.jpeg');
                 return {
-                    backgroundImage : '../imgs/' + product.backgroundImage + '.jpeg',
+                    backgroundImage : backgroundImage,
                     description : product.description,
                     title : product.name,
                     titleBlack : product.titleBlack,

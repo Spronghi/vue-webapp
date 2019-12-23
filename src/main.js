@@ -5,10 +5,13 @@ import App from './App.vue'
 import vuetify from './plugins/vuetify';
 import lang from './lang/lang';
 import routes from "./routes";
+import VueCookies from 'vue-cookies';
 
+Vue.use(VueCookies);
 Vue.use(VueI18n);
 Vue.use(VueRouter);
 
+Vue.$cookies.config('7d');
 Vue.config.productionTip = false;
 
 const router = new VueRouter({

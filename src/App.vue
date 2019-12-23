@@ -7,6 +7,7 @@
         <router-view transition="slide-x-transition"></router-view>
       </v-content>
       <Footer/>
+      <AcceptCookie/>
     </v-sheet>
   </v-app>
 </template>
@@ -15,10 +16,12 @@
 import Header from './components/Header';
 import Footer from "./components/Footer";
 import NavigationDrawer from "./components/NavigationDrawer";
+import AcceptCookie from "./components/AcceptCookie";
 
 export default {
   name: 'App',
   components: {
+    AcceptCookie,
     NavigationDrawer,
     Footer,
     Header,

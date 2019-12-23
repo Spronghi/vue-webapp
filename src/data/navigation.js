@@ -1,6 +1,10 @@
 import json from "./products";
 
 const navigation = {
+    langs: [
+        { id: 1, value: 'en', img: 'http://1.bp.blogspot.com/-ssV20xX14DM/U0V14txKTiI/AAAAAAAACtA/ngiQhHmhzaw/s1600/union-jack-flag.jpg' },
+        { id: 2, value: 'it', img: 'https://upload.wikimedia.org/wikipedia/commons/0/03/Flag_of_Italy.svg' }
+    ],
     links: [
         { id: 1, order: 1, ref: '#home', text: "header.home", icon:'mdi-home-circle-outline', to: '/home' },
         { id: 2, order: 2, ref: '#who', text: "header.who", icon:'mdi-account-circle', to: '/home' },

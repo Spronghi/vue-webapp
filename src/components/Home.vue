@@ -3,7 +3,7 @@
         <Presentation
                 class="mb-5"
                 :offset-top="offsetTop"
-                background-url="../imgs/background.jpeg"
+                background-url="https://i.imgur.com/5ki25Hp.jpg"
                 title="home.title"
                 subtitle="home.subtitle"
         />
@@ -53,7 +53,8 @@
             },
         },
         created() {
-            this.images = json.products.map(p => ({ id: p.id, translate : 'product-' + p.id, img : '../imgs/' + p.backgroundImage + '.jpeg' }));
+            let formatUrl = (img) => img.includes('http') ? img : ('../imgs/' + img + '.jpeg');
+            this.images = json.products.map(p => ({ id: p.id, translate : 'product-' + p.id, img : formatUrl(p.backgroundImage) }));
         }
     }
 </script>

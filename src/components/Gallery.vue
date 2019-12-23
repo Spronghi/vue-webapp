@@ -5,11 +5,7 @@
                 <v-card>
                     <v-container fluid>
                         <v-row>
-                            <v-col
-                                    v-for="(item, index) in images"
-                                    :key="index"
-                                    :class="{'col-3' : !isMobile, 'col-12' : isMobile}"
-                            >
+                            <v-col v-for="(item, index) in images" :key="index" :class="{'col-3' : !isMobile, 'col-12' : isMobile}">
                                 <v-hover v-slot:default="{ hover }" :key="index">
                                     <v-card flat tile :elevation="hover ? 12 : 2" @click="clickCard(item, index)" >
                                         <v-img

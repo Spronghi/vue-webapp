@@ -47,8 +47,8 @@
                 <!-- IMMAGINE SEDIA DEL CAZZO - WHY BUY FROM US -->
                 <v-col v-if="!isMobile" class="hidden-sm-and-down" cols="col-lg-4">
                     <v-img
-                            src="../assets/imgs/why-buy-from-us.png"
-                            lazy-src="../assets/imgs/why-buy-from-us.png"
+                            src="https://i.imgur.com/HFh5czk.png"
+                            lazy-src="https://i.imgur.com/HFh5czk.png"
                             aspect-ratio="1"
                             max-width="500"
                             max-height="1000"

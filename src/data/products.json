@@ -3,7 +3,7 @@
     {
       "id" : 1,
       "name" : "product-1.title",
-      "backgroundImage" : "background-2",
+      "backgroundImage" : "https://i.imgur.com/r7rYJU6.jpg",
       "images" : [
         { "translate":"product-1.image-5",  "img": "https://picsum.photos/500/300?image=30" },
         { "translate":"product-1.image-6",  "img": "https://picsum.photos/500/300?image=35" },
@@ -15,7 +15,7 @@
     {
       "id" : 2,
       "name" : "product-2.title",
-      "backgroundImage" : "background-3",
+      "backgroundImage" : "https://i.imgur.com/Ml5mmYI.jpg",
       "titleBlack" : true,
       "images" : [
         { "translate":"product-2.image-9",  "img": "https://picsum.photos/500/300?image=50" },
@@ -28,7 +28,7 @@
     {
       "id" : 3,
       "name" : "product-3.title",
-      "backgroundImage" : "background-4",
+      "backgroundImage" : "https://i.imgur.com/zb78UsN.jpg",
       "images" : [
         { "translate":"product-3.image-9",  "img": "https://picsum.photos/500/300?image=80" },
         { "translate":"product-3.image-10", "img": "https://picsum.photos/500/300?image=85" },
@@ -41,7 +41,7 @@
       "id" : 4,
       "name" : "product-4.title",
       "titleBlack" : true,
-      "backgroundImage" : "background-5",
+      "backgroundImage" : "https://i.imgur.com/EeOOl85.jpg",
       "images" : [
         { "translate":"product-4.image-9",  "img": "https://picsum.photos/500/300?image=100" },
         { "translate":"product-4.image-10", "img": "https://picsum.photos/500/300?image=120" },

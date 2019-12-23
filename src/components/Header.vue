@@ -46,6 +46,10 @@
         <v-btn class="ma-1" href="" target="_blank" text icon>
             <v-icon>mdi-reddit</v-icon>
         </v-btn>
+
+        <v-btn class="ma-1" href="" width="23" height="23" target="_blank" text icon v-for="l in langs" :key="l.id" @click="changeLang(l.value)">
+            <v-img :src="l.img" width="23" height="23"></v-img>
+        </v-btn>
     </v-app-bar>
 </template>
 
@@ -60,6 +64,7 @@
             drawer: Boolean
         },
         data: () => ({
+            langs: navigation.langs,
             icon: navigation.icon,
             links: navigation.links,
             products: navigation.products
@@ -75,6 +80,10 @@
                 this.toId('#navigation-drawer');
                 this.$emit('update-drawer', true);
             },
+            changeLang(l){
+                this.$i18n.locale = l;
+                this.$cookies.set('vue-webapp-lang', l);
+            },
             goTo(ref){
                 navigation.goTo.call(this, ref)
             },
@@ -87,6 +96,11 @@
             toId(id){
                 navigation.toId.call(this, id);
             },
+        },
+        created() {
+            if(this.$cookies.isKey('vue-webapp-cookie-allowed') && this.$cookies.get('vue-webapp-cookie-allowed') && this.$cookies.isKey('vue-webapp-lang')){
+                this.$i18n.locale = this.$cookies.get('vue-webapp-lang');
+            }
         }
     }
 </script>
